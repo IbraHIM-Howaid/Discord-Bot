@@ -1,3 +1,10 @@
+import sys
+import types
+
+# Fake the voice/audio modules so discord.py won’t try to import audioop
+sys.modules['discord.player'] = types.ModuleType('player')
+sys.modules['discord.voice_client'] = types.ModuleType('voice_client')
+
 # main.py
 import discord
 from discord.ext import commands
