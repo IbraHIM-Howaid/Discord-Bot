@@ -11,7 +11,7 @@ bot = commands.Bot(
     command_prefix=">",
     self_bot=True,
     fetch_offline_members=False,
-    intents=intents
+    intents=discord.Intents.default()
 )
 
 # ----- Config -----
